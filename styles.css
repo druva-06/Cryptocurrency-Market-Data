@@ -29,9 +29,7 @@
   font-size: 20px;
   font-weight: 600;
 }
-.right-nav{
-  
-}
+
 .right-nav .nav-link{
   text-decoration-line: none;
   color: rgb(178, 171, 171);
@@ -46,10 +44,6 @@
 }
 
 /* Main */
-
-.main-container{
-
-}
 
 .main-container .type-container{
   display: flex;
@@ -66,6 +60,11 @@
   padding: 10px;
   cursor: pointer;
 }
+
+.type-container * :hover{
+  transform: scale(1.2);
+}
+
 
 /* Temporary */
 .type-container .grid{
@@ -94,6 +93,11 @@
   padding: 10px;
   border-radius: 15px;
   background-color: rgb(40, 42, 43);
+  cursor: pointer;
+}
+
+.grid-items .single-item:hover{
+  transform: scale(1.05);
 }
 
 .grid-items .single-item *{
@@ -166,6 +170,11 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  cursor: pointer;
+}
+
+.list-items .single-item:hover{
+  transform: scale(1.05);
 }
 
 .list-items .single-item .heading{
