@@ -1,0 +1,212 @@
+*{
+  padding: 0;
+  margin: 0;
+  background-color: black;
+  color: white;
+}
+
+/* NavBar */
+
+.nav-container{
+  display: flex;
+  height: 80px;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 25px;
+}
+.left-nav{
+  display: flex;
+}
+.left-nav .heading{
+  font-size: 20px;
+  font-weight: 600;
+}
+.left-nav .ending{
+  color: rgb(72, 151, 231);
+  font-size: 20px;
+  font-weight: 600;
+}
+.right-nav{
+  
+}
+.right-nav .nav-link{
+  text-decoration-line: none;
+  color: rgb(178, 171, 171);
+  padding: 8px;
+  border-radius: 30px;
+}
+/* Tempporaray */
+.right-nav #dashboard-btn{
+  background-color: rgb(72, 151, 231);
+  padding: 8px 20px;
+}
+
+/* Main */
+
+.main-container{
+
+}
+
+.main-container .type-container{
+  display: flex;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.type-container .grid, .list{
+  text-align: center;
+  width: 50%;
+  padding: 10px;
+  cursor: pointer;
+}
+
+/* Temporary */
+.type-container .grid{
+  border-bottom: 1px solid rgb(72, 151, 231);
+  color: rgb(72, 151, 231);
+}
+
+.items-container{
+  display: flex;
+  justify-content: center;
+  /* background-color: wheat; */
+}
+
+/* Grid View */
+
+.grid-items{
+  /* background-color: white; */
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 20px 15px;
+  margin-top: 10px;
+}
+.grid-items .single-item{
+  padding: 10px;
+  border-radius: 15px;
+  background-color: rgb(40, 42, 43);
+}
+
+.grid-items .single-item *{
+  background-color: rgb(40, 42, 43);
+}
+
+.grid-items .single-item .heading{
+  display: flex;
+}
+
+.grid-items .single-item .heading img{
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+}
+
+.grid-items .single-item .heading .about{
+  padding: 10px;
+}
+
+.grid-items .about #symbol{
+  margin-top: 5px;
+  font-size: 18px;
+} 
+
+.grid-items .about #name{
+  font-size: 15px;
+  color: rgb(178, 171, 171);
+}
+
+.grid-items .single-item .percentage{
+  padding: 20px 10px;
+}
+
+.grid-items .single-item .percentage span{
+  border: 1px solid rgb(21, 192, 21);
+  padding: 8px 18px;
+  color: rgb(21, 192, 21);
+  border-radius: 20px;
+}
+
+.grid-items .single-item .price p{
+  padding: 10px;
+  padding-top: 15px;
+  color: rgb(21, 192, 21);
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.grid-items .single-item .details{
+  padding: 10px 10px;
+  padding-bottom: 20px;
+}
+
+.grid-items .details #total-price, .grid-items .details #market-cap{
+  padding: 5px 0;
+  font-size: 15px;
+  color: rgb(178, 171, 171);
+}
+
+/* List View */
+
+.list-items{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.list-items .single-item{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.list-items .single-item .heading{
+  display: flex;
+  width: 20%;
+}
+
+.list-items .single-item .heading img{
+  height: 50px;
+  padding: 10px;
+}
+
+.list-items .single-item .heading .about{
+  padding: 10px;
+}
+
+.list-items .about #symbol{
+  margin-top: 5px;
+  font-size: 18px;
+} 
+
+.list-items .about #name{
+  font-size: 15px;
+  color: rgb(178, 171, 171);
+}
+
+.list-items .single-item #percentage{
+  border: 1px solid rgb(21, 192, 21);
+  padding: 8px 18px;
+  color: rgb(21, 192, 21);
+  border-radius: 20px;
+  width: 4%;
+  text-align: center;
+}
+
+.list-items .single-item #price{
+  color: rgb(21, 192, 21);
+  font-size: 20px;
+  font-weight: 500;
+  width: 10%;
+}
+
+.list-items .single-item #total-price{
+  font-size: 15px;
+  color: rgb(178, 171, 171);
+  width: 10%
+}
+
+.list-items .single-item #market-cap{
+  font-size: 15px;
+  color: rgb(178, 171, 171);
+  width: 10%;
+}
