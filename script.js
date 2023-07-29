@@ -36,6 +36,7 @@ function appendDatatoListView(cryptoList){
 
 
 function cnvrtJsonToGridView(cryptoEle){
+    let priceChangePerc = cryptoEle.price_change_percentage_24h;
     let singleItem = document.createElement('div')
     singleItem.className = 'single-item'
     let gridItem =`
@@ -49,7 +50,7 @@ function cnvrtJsonToGridView(cryptoEle){
         </div>
     </div>
     <div class="percentage">
-        <span>0.97%</span>
+        <span>${priceChangePerc}%</span>
     </div>
     <div class="price">
         <p>$${cryptoEle.current_price}</p>
@@ -59,11 +60,35 @@ function cnvrtJsonToGridView(cryptoEle){
         <p id="market-cap">Market Cap: ${cryptoEle.market_cap}</p>
     </div>
     `
+    if(priceChangePerc < 0){
+        gridItem = `
+        <div class="heading">
+            <div class="icon">
+                <img src="${cryptoEle['image']}" alt="">
+            </div>
+            <div class="about">
+                <p id="symbol">${(cryptoEle.symbol).toUpperCase()}</p>
+                <p id="name">${cryptoEle.name}</p>
+            </div>
+        </div>
+        <div class="percentage">
+            <span style="border: 1px solid red; color: red;">${priceChangePerc}%</span>
+        </div>
+        <div class="price">
+            <p style="color: red;">$${cryptoEle.current_price}</p>
+        </div>
+        <div class="details">
+            <p id="total-price">Total Volume: ${cryptoEle.total_volume}</p>
+            <p id="market-cap">Market Cap: ${cryptoEle.market_cap}</p>
+        </div>
+        `
+    }
     singleItem.innerHTML = gridItem
     return singleItem
 }
 
 function cnvrtJsonToListView(cryptoEle){
+    let priceChangePerc = cryptoEle.price_change_percentage_24h;
     let singleItem = document.createElement('div')
     singleItem.className = 'single-item'
     let listItem =`
@@ -76,11 +101,28 @@ function cnvrtJsonToListView(cryptoEle){
             <p id="name">${cryptoEle.name}</p>
         </div>
     </div>
-    <p id="percentage">0.97%</p>
+    <p id="percentage">${priceChangePerc}%</p>
     <p id="price">$${cryptoEle.current_price}</p>
     <p id="total-price">${cryptoEle.total_volume}</p>
     <p id="market-cap">$${cryptoEle.market_cap}</p>
     `
+    if(priceChangePerc < 0){
+        listItem =`
+        <div class="heading">
+            <div class="icon">
+                <img src="${cryptoEle['image']}" alt="">
+            </div>
+            <div class="about">
+                <p id="symbol">${(cryptoEle.symbol).toUpperCase()}</p>
+                <p id="name">${cryptoEle.name}</p>
+            </div>
+        </div>
+        <p id="percentage" style="border: 1px solid red; color: red;">${priceChangePerc}%</p>
+        <p id="price" style="color: red;">$${cryptoEle.current_price}</p>
+        <p id="total-price">${cryptoEle.total_volume}</p>
+        <p id="market-cap">$${cryptoEle.market_cap}</p>
+        `
+    }
     singleItem.innerHTML = listItem
     return singleItem
 }
