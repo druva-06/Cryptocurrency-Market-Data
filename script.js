@@ -37,6 +37,7 @@ function appendDatatoListView(cryptoList){
 
 function cnvrtJsonToGridView(cryptoEle){
     let priceChangePerc = cryptoEle.price_change_percentage_24h;
+    priceChangePerc = priceChangePerc.toFixed(2)
     let singleItem = document.createElement('div')
     singleItem.className = 'single-item'
     let gridItem =`
@@ -89,6 +90,7 @@ function cnvrtJsonToGridView(cryptoEle){
 
 function cnvrtJsonToListView(cryptoEle){
     let priceChangePerc = cryptoEle.price_change_percentage_24h;
+    priceChangePerc = priceChangePerc.toFixed(2)
     let singleItem = document.createElement('div')
     singleItem.className = 'single-item'
     let listItem =`
