@@ -58,7 +58,7 @@ function cnvrtJsonToGridView(cryptoEle){
     </div>
     <div class="details">
         <p id="total-price">Total Volume: ${cryptoEle.total_volume}</p>
-        <p id="market-cap">Market Cap: ${cryptoEle.market_cap}</p>
+        <p id="market-cap">Market Cap: $${cryptoEle.market_cap}</p>
     </div>
     `
     if(priceChangePerc < 0){
@@ -80,7 +80,7 @@ function cnvrtJsonToGridView(cryptoEle){
         </div>
         <div class="details">
             <p id="total-price">Total Volume: ${cryptoEle.total_volume}</p>
-            <p id="market-cap">Market Cap: ${cryptoEle.market_cap}</p>
+            <p id="market-cap">Market Cap: $${cryptoEle.market_cap}</p>
         </div>
         `
     }
